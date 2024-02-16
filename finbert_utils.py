@@ -22,9 +22,10 @@ def estimate_sentiment(news):
         return 0, labels[-1]
     
 if __name__ == "__main__":
+    print("""Cuda GPU available : {0}, {1}""".format(torch.cuda.is_available(), torch.cuda.get_device_name(0))
+        )
     tensor, sentiment = estimate_sentiment(["markets responded positively to the news!","traders were pleasantly surprised!"])
     print("""tensor : {0}
           sentiment : {1}""".format(tensor, sentiment)
         )
-    print("""Cuda GPU available : {}""".format(torch.cuda.is_available())
-        )
+    
