@@ -13,6 +13,7 @@ config.read("properties.ini")
 section = config['API']
 API_KEY = section['API_KEY']
 API_SECRET = section['API_SECRET']
+BASE_URL = section['BASE_URL']
 
 # ALPACA_CREDS = { key.upper() : section[key] for key in section}
 # print(ALPACA_CREDS)
