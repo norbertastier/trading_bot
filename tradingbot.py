@@ -93,16 +93,16 @@ class MLTrader(Strategy):
                 self.submit_order(order)
                 self.last_trade = "sell"
 
-# start_date = datetime(2023, 1, 15)
-# end_date = datetime(2024, 1, 30)
+start_date = datetime(2023, 1, 15)
+end_date = datetime(2024, 1, 30)
 
-# broker = Alpaca(ALPACA_CREDS)
-# strategy = MLTrader(name='mlstrat', broker=broker,
-#                     parameters={"symbol":"SPY", "cash_at_risk" : .5})
+broker = Alpaca(ALPACA_CREDS)
+strategy = MLTrader(name='mlstrat', broker=broker,
+                    parameters={"symbol":"SPY", "cash_at_risk" : .5})
 
-# strategy.backtest(
-#     YahooDataBacktesting, 
-#     start_date,
-#     end_date,
-#     parameters={"symbol":"SPY", "cash_at_risk" : .5}
-#     )
+strategy.backtest(
+    YahooDataBacktesting, 
+    start_date,
+    end_date,
+    parameters={"symbol":"SPY", "cash_at_risk" : .5}
+    )
